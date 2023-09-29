@@ -1,0 +1,336 @@
+body {
+  height: 20000px;
+
+  background-color: #759d64;
+}
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+.intro-body {
+  background-image: url("./img/souris.png");
+  background-repeat: no-repeat;
+  background-position: top -100% right 1%;
+  background-size: 20%;
+}
+header {
+  width: 99%;
+  max-width: 1440px;
+  color: #ff3131;
+  position: fixed;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid rgba(174, 145, 145, 0.4);
+  border-right: 2px solid rgba(174, 145, 145, 0.4);
+  border-left: 1px solid rgba(174, 145, 145, 0.2);
+  border-bottom: 1px solid rgba(174, 145, 145, 0.2);
+}
+header h1 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 3rem;
+}
+.end-header {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 2rem;
+  display: none;
+}
+
+/* ACCUEIL */
+
+/* intro */
+.intro {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  z-index: 999;
+  border-radius: 50% 90% 50% 0%;
+  font-size: 1.2rem;
+  padding: 3rem;
+}
+/* retour */
+.back {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  z-index: 999;
+  font-size: 1.2rem;
+}
+.back section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  z-index: 999;
+  font-size: 1.2rem;
+}
+.back p {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+/* black */
+#blackIntro {
+  /* width: 30%; */
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* dialogue */
+#name {
+  background-color: yellow;
+}
+#name:focus {
+  animation: name 500ms ease-in-out 3 forwards;
+}
+@keyframes name {
+  0% {
+    transform: translateX(200px) rotate(180deg) scale(3);
+    background-color: black;
+  }
+  100% {
+    transform: scale(1);
+    background-color: yellow;
+  }
+}
+.appear {
+  display: none;
+}
+.input {
+  margin-top: 1rem;
+}
+
+/* MATCH */
+
+/* score */
+.score {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: capitalize;
+  border: black solid 10px;
+  display: flex;
+  justify-content: center;
+}
+.nom {
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+#score {
+  border: black solid 1px;
+  background-color: black;
+  padding: 30px 4px;
+}
+.scoreDiv {
+  padding: 10px;
+  text-align: center;
+}
+
+/* terrain */
+.wrapper {
+  width: 700px;
+  height: 1000px;
+  border: solid white 2px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(75deg) scale(0.7);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  display: none;
+}
+.terrain {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+.poteaux {
+  height: 300px;
+  position: fixed;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -100%);
+}
+#poteaux {
+  height: 100%;
+}
+
+/* JOUEURS */
+
+/* joueur court à l'essai */
+#essai {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  position: fixed;
+  left: 70px;
+  bottom: 100px;
+  transform: rotate(-90deg);
+  z-index: 2;
+}
+
+/* joueur court pour transfo */
+#run {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  position: fixed;
+  left: 280px;
+  bottom: 100px;
+  transform: rotate(-90deg);
+  z-index: 2;
+  display: none;
+}
+
+/* joueur transfo */
+#transfo {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  position: fixed;
+  left: 280px;
+  bottom: 10px;
+  transform: rotate(-90deg) scaleX(-1);
+  z-index: 2;
+  display: none;
+}
+
+/* black */
+#black {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  position: fixed;
+  left: -35px;
+  bottom: 800px;
+  transform: rotate(-45deg);
+}
+
+/* black au début */
+#blackInit {
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+/* BALLES */
+
+/* balle  */
+#ball {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  position: fixed;
+  left: 280px;
+  bottom: 380px;
+  z-index: 2;
+  display: none;
+}
+
+/* balle sur socle */
+#ball2 {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  position: fixed;
+  left: 420px;
+  bottom: 380px;
+  transform: rotate(-90deg);
+  z-index: 2;
+  display: none;
+}
+
+/* IMAGES */
+#essai img,
+#run img,
+#transfo img,
+#black img {
+  width: 10vw;
+  height: 10vw;
+}
+
+#blackInit img {
+  width: 100%;
+  height: 100%;
+}
+#blackIntro img {
+  width: 100px;
+  height: 100%;
+  /* margin-left: -100px; */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translate(-50%, -38%);
+}
+#ball2 img,
+#ball img {
+  width: 3vw;
+  height: 3vw;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+  .match-container {
+    transform: translate(-50%, -50%) rotate(75deg) scale(0.2);
+    /* position: fixed;
+    top: 0%;
+    left: 0%; */
+  }
+  .match-container img {
+    transform: scale(6);
+  }
+  .poteaux {
+    transform: translate(-60%, -105%) rotate(-1deg) scale(0.2);
+  }
+  .score {
+    transform: translateX(-50%) scale(0.8);
+  }
+}
