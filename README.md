@@ -4,7 +4,7 @@
 
 Application réalisée dans le cadre du concours S2#1 du Designer du Web
 
-Thème: "ANIMTAION AU SCROLL"
+Thème: "ANIMATION AU SCROLL"
 
 ## Table des matières
 
