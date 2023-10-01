@@ -20,7 +20,7 @@ const score = document.querySelector(".score");
 // console.log("window.scrollY", window.scrollY);
 // console.log("scrollY MAX", body.clientHeight - screen.height);
 
-let nom = sessionStorage.getItem("nom scroll");
+let nom = localStorage.getItem("nom scroll");
 
 window.addEventListener("scroll", scrollEssai);
 window.addEventListener("scroll", scrollTransfo);

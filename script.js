@@ -24,8 +24,8 @@ const score = document.querySelector(".score");
 window.addEventListener("scroll", init);
 window.addEventListener("load", welcomeback);
 function welcomeback() {
-  let nom = sessionStorage.getItem("nom scroll");
-  if (sessionStorage.getItem("nom scroll")) {
+  let nom = localStorage.getItem("nom scroll");
+  if (localStorage.getItem("nom scroll")) {
     console.log("back");
     back.style.display = "block";
     body.classList.add("stop-scrolling");
@@ -38,7 +38,7 @@ function welcomeback() {
     yes.addEventListener("click", restart);
 
     function start() {
-      sessionStorage.removeItem("nom scroll");
+      localStorage.removeItem("nom scroll");
       body.classList.remove("stop-scrolling");
       back.style.display = "none";
       init();
@@ -81,7 +81,7 @@ function getName(e) {
     send.disabled = false;
   }
   console.log(nom);
-  sessionStorage.setItem("nom scroll", nom);
+  localStorage.setItem("nom scroll", nom);
 }
 
 function hideIntro() {
