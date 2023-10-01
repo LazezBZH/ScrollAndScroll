@@ -16,7 +16,7 @@ body {
 header {
   width: 99%;
   max-width: 1440px;
-  color: #ff3131;
+  color: red;
   position: fixed;
   top: 1%;
   left: 50%;
@@ -33,12 +33,17 @@ header h1 {
   padding-right: 1rem;
   padding-left: 1rem;
   font-size: 3rem;
+  background-color: black;
+}
+.title {
+  display: none;
 }
 .end-header {
   padding-right: 1rem;
   padding-left: 1rem;
   font-size: 2rem;
   display: none;
+  background-color: black;
 }
 
 /* ACCUEIL */
@@ -135,7 +140,7 @@ header h1 {
   left: 50%;
   transform: translateX(-50%);
   text-transform: capitalize;
-  border: black solid 10px;
+  border: white solid 10px;
   display: flex;
   justify-content: center;
 }
@@ -144,8 +149,8 @@ header h1 {
   margin-left: 10px;
 }
 #score {
-  border: black solid 1px;
-  background-color: black;
+  border: white solid 1px;
+  background-color: white;
   padding: 30px 4px;
 }
 .scoreDiv {

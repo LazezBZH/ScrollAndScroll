@@ -204,11 +204,11 @@ function scrollTransfo() {
         iterations: Infinity,
       }
     );
-  } else if (go >= 11 && go < 13) {
+  } else if (go >= 11 && go < 11.5) {
     score.innerHTML = `  BRAVO! <span class="nom"> ${nom}</span>`;
     score.style.top = "10vh";
     score.style.border = "red solid 10px";
-    score.style.color = "black";
+    score.style.color = "white";
     blackInit.style.display = "none";
     wrapper.style.display = "flex";
     terrain.style.display = "block";
@@ -218,11 +218,22 @@ function scrollTransfo() {
     black.style.display = "none";
     ball2.style.display = "none";
     ball.style.display = "none";
-  } else if (go >= 14) {
+  } else if (go >= 11.5 && go < 12) {
+    blackInit.style.display = "none";
+    wrapper.style.display = "none";
+    terrain.style.display = "none";
+    essai.style.display = "none";
+    run.style.display = "none";
+    transfo.style.display = "none";
+    black.style.display = "none";
+    ball2.style.display = "none";
+    ball.style.display = "none";
+  } else if (go >= 12) {
     window.location.replace("/");
   }
 }
 
+// ballon transformation
 let x = 42;
 let y = 42;
 let ascending = true;
